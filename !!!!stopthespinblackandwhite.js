@@ -1,10 +1,10 @@
 let x = 0;
-let transx = 100//sets the first test object in the middle
-let transy = 100//sets the first test object in the middle
+let transx = 200//sets the first test object in the middle
+let transy = 200//sets the first test object in the middle
 let fillx = 0
 
 function setup() {
-  createCanvas(200, 200);//size of the test field
+  createCanvas(400, 400);//size of the test field
   //noLoop();
   frameRate(20);
   rectMode(CENTER);
@@ -54,8 +54,8 @@ for(x=0;x<=width;x=x+20){//spacing of lines e.g. x=x+20
 
 function mousePressed() {
   loop();
-  transx = floor(random(0,10))*20//sets the x spacing of targets
-  transy = floor(random(0,10))*20//sets the y spacing of targets
+  transx = floor(random(0,10))*40//sets the x spacing of targets
+  transy = floor(random(0,10))*40//sets the y spacing of targets
   //transx = random(0,width)// this causes too many targets
   //transy = random(0,height)//this causes too many targets
   fillx = 0
