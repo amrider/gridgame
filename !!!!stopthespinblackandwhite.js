@@ -1,6 +1,6 @@
 let x = 0;
-let transx = 400//sets the first test object in the middle
-let transy = 400//sets the first test object in the middle
+let transx = 320//sets the first test object in the middle
+let transy = 320//sets the first test object in the middle
 let fillx = 0
 var button
 var button1
