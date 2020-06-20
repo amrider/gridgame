@@ -16,12 +16,14 @@ function setup() {
   fill(255)
   //ellipse(width/2, height/2, 5,5)
   createP("")
-  button = createButton('Click here to start and at the moment you see each moving spot')
+  button = createButton('Click here to start and at the moment you see each new spot')
   button.mousePressed(spawnNew)
   button.mouseReleased(beginAgain)
   button.size(320,50)
-  //button1 = createButton('click here to draw a red dot')
-  //button1.mousePressed(redDot)
+  createP('')
+  button1 = createButton('Click here to pause the game.')
+  button1.size(320, 50)
+  button1.mousePressed(stopGame)
 }
 
 
@@ -84,6 +86,11 @@ function spawnNew(){
 } else {
   console.log ("ok")}//remember to turn on the console log!
 }
+
+function stopGame(){
+  noLoop()
+}
+
 
 //function redDot(){
   //function draw(){
