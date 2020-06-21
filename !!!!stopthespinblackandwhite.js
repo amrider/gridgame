@@ -4,6 +4,9 @@ let transy = 320//sets the first test object in the middle
 let fillx = 0
 var button
 var button1
+var density
+var density2
+
 
 function setup() {
   createCanvas(320, 320);//size of the test field
@@ -59,6 +62,7 @@ for(x=0;x<=width;x=x+20){//spacing of lines e.g. x=x+20
   rect(0, 0, 20, 20);//the size of the rectangle is here
   //adding +fillx to the starting size makes the target grow!!!
   fillx = fillx+5//sets the steepness of the color change
+
 }
 
 //function mouseReleased(){
@@ -82,8 +86,19 @@ function spawnNew(){
   //noLoop();
   if (fillx > 80) {//sets the sensitivity of the test
   console.log("SCOTOMA!"+ transx ,transy, fillx);
-  createP ("Scotoma at x=" + transx + ",y=" + transy + ",density=" + fillx/255*100 + "%");
-} else {
+  density = fillx*100/255
+  density2 = density
+  createP ("Scotoma at x=" + transx + ",y=" + transy );
+}
+if (fillx > 255) {//sets the sensitivity of the test
+console.log("SCOTOMA!"+ transx ,transy, fillx);
+density = fillx*100/255
+density2 = density
+createP ("Absolute Scotoma at x=" + transx + ",y=" + transy );
+}
+
+
+else {
   console.log ("ok")}//remember to turn on the console log!
 }
 
